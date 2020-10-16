@@ -1,40 +1,73 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<title>SHCI: Intro</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/CCX.css" id="theme">
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="icon" href="https://pbs.twimg.com/profile_images/827231214968983553/RS-d5Bmf_400x400.jpg">
+
+
+</head>
+
+<body>
+
+	<div class="reveal">
+		<div class="slides">
+			<!--  Simple Stuff -->
+			<section data-external="/slides/title.html"> </section>
+			<section data-external="/slides/intro/thank_you.html"></section>
+
+			<!-- Intro -->
+			<section data-external="/slides/intro/el_struct.html"></section>
+			<section data-external="/slides/intro/cost_of_corr.html"></section>
+			<section data-external="/slides/intro/cas.html"></section>
+
+			<!-- Selected CI -->
+			<section data-external="/slides/selected_ci/sci.html"></section>
+			<section data-external="/slides/selected_ci/general_overview.html"></section>
+			<section data-external="/slides/selected_ci/hci.html"></section>
+			<section data-external="/slides/selected_ci/hci_pt.html"></section>
+			<!-- <section data-external="/slides/selected_ci/vpt.html"></section> -->
+			<section data-external="/slides/selected_ci/hci_practical.html"></section>
+
+			<!-- Wrap Up -->
+			<section data-external="/slides/dice_capabilities.html"></section>
+			<section data-external="/slides/questions.html"> </section>
+
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/math/math.js"></script>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+	<script>
+		Reveal.initialize({
+			hash: true,
+			center: false,
+			slideNumber: true,
+			math: {
+				mathjax: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
+				config: 'TeX-AMS_HTML-full',
+				TeX: { Macros: { RR: "{\\bf R}" }, packages: ["physics", "color"] },
+			},
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
+			dependencies: [
+				{ src: 'plugin/external/external.js', condition: function () { return !!document.querySelector('[data-external]'); } },
+			],
+		});
+	</script>
+</body>
+
 </html>

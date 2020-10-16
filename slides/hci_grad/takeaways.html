@@ -1,0 +1,52 @@
+<section>
+    <h3 class="sec-E">Takeaways</h3>
+    <ul style="font-size:0.75em">
+        <!-- <li class="fragment">(Not shown) HCISCF gradients converge steadily with \( \epsilon_1 \) to the exact
+            (CASSCF)
+        </li> -->
+        <li class="fragment">Final geometries and energies converge smoothly to the exact answers</li>
+        <li class="fragment">We can run "cheap" geometry optimizations and if we want accurate energies we can run a
+            "tight" HCI calculation</li>
+        <li class="fragment">Even with the ability to treat larger active spaces, we still find systems with
+            orbitals
+            "rotating" in/out of the active space</li>
+
+    </ul>
+
+</section>
+
+
+<section>
+    <h3 class="sec-E">Extra Slides: Gradient Errors</h3>
+    <img width="45%" src="assets/images/sc_single_point_error.png">
+    <img width="45%" src="assets/images/sc2_eps1_conv2.png">
+
+    <p>For the scandium dimer</p>
+</section>
+
+<section>
+    <h3 class="sec-E">Extra Slides: Geom. Opt. w/ Very Approximate Wave Functions</h3>
+    <div style="display: flex; align-items: center;">
+        <div style="flex: 1; font-size:24px;">
+            <ul>
+                <li><span style="color: #4878d0;">Blue:</span> Increase in energy over time, even though gradients and
+                    displacements decrease</li>
+                <li><span style="color: #ee854a;">Orange:</span> No more rise in energy, but error in final geometry
+                    increases</li>
+                <li><span style="color: #6acc64;">Green:</span> No more rise in energy and decreased final geometry
+                    error
+                </li>
+            </ul>
+        </div>
+        <div style="flex: 1; font-size:24px;">
+            <img src="assets/images/n2_opt_pt_comp.png"></img>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3 class="sec-E">Extra Slides: Fe(PDI) Singlet Opt.</h3>
+
+    <img class="r-stretch" src="assets/images/fe_pdi_S_opt.png">
+
+</section>

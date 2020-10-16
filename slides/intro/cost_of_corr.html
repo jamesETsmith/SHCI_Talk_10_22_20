@@ -1,0 +1,40 @@
+<h1>The Cost of Correlation</h1>
+
+<div style="display:table;">
+    <div style="display: table-cell;vertical-align: middle; font-size: 0.65em;">
+        <ul>
+            <li>Full CI (FCI): CI with all possible configurations</li>
+            <li class="fragment" data-fragment-index="1">Exact for a given single-particle basis <i class="fa fa-check"
+                    aria-hidden="true" style="color:rgb(0, 216, 0)"></i></li>
+            <li class="fragment" , data-fragment-index="2">E<sub>corr.</sub> = E<sub>FCI</sub> - E<sub>HF</sub></li>
+            <li class="fragment" data-fragment-index="3">The cost scales exponentially with the size of the system <i
+                    class="fa fa-times" aria-hidden="true" style="color:rgb(216, 0, 0)"></i></li>
+        </ul>
+    </div>
+    <div style="display: table-cell;vertical-align: middle;">
+        <img class="fragment" data-framgent-index="4" width="1400px" src="assets/figures/scaling/scaling.png">
+
+    </div>
+</div>
+
+<aside class="notes">
+    <ul>
+        <li>When we include all possible determinants/configurations in our CI wave function, we call it the
+            Full CI wave function </li>
+        <li>This wave function has some important properties. It's exact (for a given basis) which is great, we love
+            when we get things totally right.</li>
+        <li>We often want to know how wrong the HF energy is compared to FCI and since we talk about this so much we
+            have a special name for this error: the correlation energy</li>
+        <li>Unfortunately, there's no free lunch so this exactness comes at a price. The cost <em>just to store</em> the
+            FCI wave function grows combinatorially with system size.</li>
+        <li>To show you what I mean by that, I've created a fancy little figure.</li>
+        <li>Here on the x-axis we have the size of our system, on the y-axis we have the memory required to store FCI
+            wave functions <em>it's in log scale.</em></li>
+        <li>To store a single water molecule, it's easy, your phone has enough memory.</li>
+        <li>To do two water molecules, a laptop isn't enough, and we need a single node on a supercomputer.</li>
+        <li>I haven't shown three water molecules here because that's off the chart. We'd need more memory than the
+            rocky mountain super computer has.</li>
+        <li>Given the first few slides of this talk, we're clearly interested in systems more complicated than 3 water
+            molecules. So we need to do something about this cost.</li>
+    </ul>
+</aside>

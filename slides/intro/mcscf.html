@@ -1,0 +1,30 @@
+<h4 class='sec-B'>Optimizing Orbitals and Configurations</h4>
+<br>
+<span style="font-size: 0.75em;">
+
+    <ul>
+        <li>We've cut the cost, but lost some accuracy</li>
+        <!-- <li class="fragment">CASCI misses some of E<sub>corr.</sub></li> -->
+        <li class="fragment">How can we recoup some of E<sub>corr.</sub>?</li>
+        <li class="fragment">Optimizing orbitals and CI coefficients
+            <ul>
+                <li>Orbitals are now optimal for a <b>set</b> of configurations rather than one</li>
+                <li>i.e. <u>multireference</u></li>
+            </ul>
+        </li>
+
+        <li class="fragment">CASSCF</li>
+
+    </ul>
+
+    <span class="fragment">
+        $$
+        \ket{\boldsymbol{\kappa},\textbf{C}} =
+        \text{exp}(-\hat{\kappa})
+        \sum_i C_i \ket{i}
+
+        \quad\quad \text{solve for } C_i \text{ and } \kappa
+        $$
+    </span>
+
+</span>

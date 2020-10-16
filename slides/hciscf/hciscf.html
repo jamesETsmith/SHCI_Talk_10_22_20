@@ -1,0 +1,50 @@
+<section>
+    <h3 class="sec-D">CASSCF with HCI</h3>
+
+    <b>Reminder:</b>
+    <span style="font-size: 0.75em;">
+        <p>Optimize orbitals for a <u><b>set</b></u> of configurations</p>
+        $$
+        \ket{\boldsymbol{\kappa},\textbf{C}} =
+        \text{exp}(-\hat{\kappa})
+        \sum_i C_i \ket{i}
+
+        \quad\quad \text{solve for } C_i \text{ and } \kappa
+        $$
+    </span>
+
+
+    <ul class="fragment" style="font-size: 0.75em;">
+        <li>We can use HCI to solve for \(\{ C_i \}\)</li>
+        <li>Two variations:
+            <table style="border-collapse: collapse !important;">
+                <tr>
+                    <td style="border:0px solid black;">Variational <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </td>
+                    <td style="border:0px solid black;"><b>vHCISCF</b></td>
+                </tr>
+                <tr>
+                    <td>Variational + PT <i class="fa fa-arrow-right" aria-hidden="true"></i></td>
+                    <td><b>HCISCF </b></td>
+                </tr>
+            </table>
+        </li>
+    </ul>
+</section>
+<section>
+    <h3 class="sec-D">MCSCF with HCI</h3>
+    <span>
+        <p>To optimize orbitals, we rely on the Hellmann-Feynam Thm.:</p>
+        $$
+        \frac{\partial E}{\partial \kappa} =
+        \bra{\Psi_0} \frac{\partial H}{\partial \kappa} \ket{\Psi_0}
+        $$
+    </span>
+    <span>
+        Enforce variationality of \( E_{HCI} = E_0 + E_2 \)
+        $$
+        \frac{\partial E_{HCI}}{\partial \kappa} =
+        \bra{\Psi_0} \frac{\partial H}{\partial \kappa} \ket{\Psi_0} + ... (\text{lagrangian terms})
+        $$
+    </span>
+</section>

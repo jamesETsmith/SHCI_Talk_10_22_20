@@ -1,0 +1,91 @@
+<section>
+    <h3 class="sec-E">Gradients of CASSCF Wave Functions</h3>
+    <div class="cols">
+        <div class="col">
+            <ul>
+                <li>Well established gradient theory for CASSCF, we use the same gradient expressions for HCISCF </li>
+                <li class='fragment'>But there's a catch: the expressions aren't exact for HCISCF</li>
+                <li class="fragment">
+                    Our calculations have two sources of error:
+                    <ol>
+                        <li>HCI approximates FCI</li>
+                        <li>Gradient expressions aren't exact</li>
+                    </ol>
+
+            </ul>
+
+        </div>
+        <div class="col">
+            <ul>
+                <li class="fragment">We can control error of the energy <em>and</em> gradient with \(\epsilon_1\)</li>
+                <li class="fragment">If the wave functions are close enough to exact, the error from these
+                    approximations is zero</li>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <aside class="notes">
+        <ul>
+            <li>The gradient expressions fit, but not great, like a kid who's a just a bit too big to be in a booster
+                seat. It'll probably be fine, but it's technically not right.</li>
+        </ul>
+    </aside>
+</section>
+<section>
+
+    <h3 class="sec-E">Gradients of MCSCF Wave Functions</h3>
+    <span style="font-size: 0.65em;">
+        $$
+        \bra{\Psi}\hat{H}\ket{\Psi} =
+        E_{elec} =
+        \sum_{ij} h_{ij} \gamma_{ij} +
+        \sum_{ijkl} g_{ijkl} \Gamma_{ijkl}
+        $$
+
+        <span class="fragment">
+
+            $$
+            \frac{\partial E_{elec}}{\partial a} =
+            \sum_{ij} \frac{\partial h_{ij}}{\partial a} \gamma_{ij} +
+            \sum_{ijkl} \frac{\partial g_{ijkl}}{\partial a} \Gamma_{ijkl}
+            $$
+            \( a := \text{nuclear coord.} \)
+
+        </span>
+
+        <span class="fragment">
+
+            $$
+            \frac{\partial E_{elec}}{\partial a} =
+            \sum_{ij} h_{ij}^a \gamma_{ij} + \sum_{ijkl} g_{ijkl}^a \Gamma_{ijkl}
+            - \sum_{ij} X_{ij} S^a_{ij}
+            +
+            \colorbox{yellow}{ \( \sum_{ij} U_{ij}^a (X_{ij} - X_{ji}) \) }
+            $$
+        </span>
+
+        <span class="fragment">
+
+            <i class="fa fa-arrow-circle-down" aria-hidden="true" style="transform: scale(2,2);"></i>
+
+            $$
+            \frac{\partial E_{elec}}{\partial a} =
+            \sum_{ij} h_{ij}^a \gamma_{ij} + \sum_{ijkl} g_{ijkl}^a \Gamma_{ijkl}
+            - \sum_{ij} X_{ij} S^a_{ij}
+            $$
+        </span>
+
+    </span>
+
+    <aside class="notes">
+        <ul>
+            <li>Energy expression</li>
+            <li>Gradients of the energy look deceptively simple, but as we expand them things get more
+                complicated</li>
+            <li>Showing you all this math to highlight that we are using CASSCF gradient expressions for
+                HCISCF which is an approximation</li>
+            <li>The error from this approximation should decrease as we decrease \( \epsilon_1 \)</li>
+        </ul>
+    </aside>
+
+</section>

@@ -1,0 +1,24 @@
+<h1>Controlling Gradient Error</h1>
+<ol style="font-size: 0.75em;">
+    <li>CASSCF with PT Correction <i class="fa fa-arrow-right" aria-hidden="true"></i> HCISCF</li>
+    <li class="fragment">Active-active orbital rotations <i class="fa fa-arrow-right" aria-hidden="true"></i> AA</li>
+    <li class="fragment">Include more determinants, i.e. decrease \( \epsilon_1 \) (expensive)</li>
+</ol>
+
+<div class="cols">
+    <div class="col">
+        <div class="fragment" style="font-size: 0.6em;">
+            <!-- <p>How much do 1 and 2 decrease error?</p> -->
+            <img src="assets/figures/sc_single_point_error.png">
+        </div>
+    </div>
+    <div class="col">
+        <img src="assets/figures/sc2_eps1_conv2.png" class="fragment">
+
+    </div>
+</div>
+
+<aside class="notes">
+    Sc<sub>2</sub> CAS(6e,18o)/cc-pVDZ at 2.38 \AA. Both species use values of \( \epsilon_1=5\cdot10^{-3} \) and
+    \( \epsilon_2=10^{-10} \) Ha.
+</aside>

@@ -27,25 +27,56 @@
 			<section data-external="slides/intro/thank_you.html"></section>
 
 			<!-- Intro -->
-			<section data-external="slides/intro/el_struct.html"></section>
-			<section data-external="slides/intro/cost_of_corr.html"></section>
-			<section data-external="slides/intro/cas.html"></section>
+			<section data-external="slides/intro/el_struct.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/intro/cost_of_corr.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/intro/cas.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
 
 			<!-- Selected CI -->
-			<section data-external="slides/selected_ci/sci.html"></section>
-			<section data-external="slides/selected_ci/general_overview.html"></section>
-			<section data-external="slides/selected_ci/hci.html"></section>
-			<section data-external="slides/selected_ci/hci_pt.html"></section>
+			<section data-external="slides/selected_ci/sci.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/selected_ci/general_overview.html"
+				data-background-image="assets/CCQ_Full_Logo.png" data-background-size="200px"
+				data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/selected_ci/hci.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/selected_ci/hci_pt.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
 			<!-- <section data-external="slides/selected_ci/vpt.html"></section> -->
-			<section data-external="slides/selected_ci/hci_practical.html"></section>
+			<section data-external="slides/selected_ci/hci_practical.html"
+				data-background-image="assets/CCQ_Full_Logo.png" data-background-size="200px"
+				data-background-position="bottom 100px right 100px"></section>
 
 			<!-- MCSCF -->
-			<section data-external="slides/mcscf/mcscf.html"></section>
-			<section data-external="slides/mcscf/mcscf_w_hci.html"></section>
+			<section data-external="slides/mcscf/mcscf.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/mcscf/mcscf_w_hci.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/mcscf/fe_p.html" data-state="FeP-slide-1"
+				data-background-image="assets/CCQ_Full_Logo.png" data-background-size="200px"
+				data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/mcscf/fe_p_gap.html" data-state="FeP-slide-2"
+				data-background-image="assets/CCQ_Full_Logo.png" data-background-size="200px"
+				data-background-position="bottom 100px right 100px"></section>
+
+			<!-- MCSCF Grad -->
+			<section data-external="slides/hci_grad/theory_overview.html"
+				data-background-image="assets/CCQ_Full_Logo.png" data-background-size="200px"
+				data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/hci_grad/theory_math.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/hci_grad/gradient_error.html"
+				data-background-image="assets/CCQ_Full_Logo.png" data-background-size="200px"
+				data-background-position="bottom 100px right 100px"></section>
+
 
 			<!-- Wrap Up -->
-			<section data-external="slides/dice_capabilities.html"></section>
-			<section data-external="slides/questions.html"> </section>
+			<section data-external="slides/dice_capabilities.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/questions.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"> </section>
 
 		</div>
 	</div>
@@ -55,6 +86,9 @@
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
 	<script src="plugin/math/math.js"></script>
+
+	<script src="https://unpkg.com/ngl@next"></script>
+	<!-- <script src="https://cdn.rawgit.com/arose/ngl/v0.10.4-1/dist/ngl.js"></script> -->
 
 	<script>
 		Reveal.initialize({
@@ -69,8 +103,44 @@
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
 			dependencies: [
 				{ src: 'plugin/external/external.js', condition: function () { return !!document.querySelector('[data-external]'); } },
+				{ src: 'plugin/chalkboard/chalkboard.js' },
 			],
+			keyboard: {
+				67: function () { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+				66: function () { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+				46: function () { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+				8: function () { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+				68: function () { RevealChalkboard.download() },	// download recorded chalkboard drawing when 'd' is pressed
+				88: function () { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+				89: function () { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+			},
 		});
+
+		// FeP 1
+		Reveal.addEventListener("FeP-slide-1", function () {
+			var stage = new NGL.Stage("FeP-vp-1", {
+				backgroundColor: "white",
+				sampleLevel: 5
+			});
+			stage.loadFile("assets/mol_geometries/fe_porphyrin.mol2", { defaultRepresentation: true }).then(function (o) {
+				stage.autoView();
+				stage.viewer.camera.position.z = -18; // Camera Zoom (smaller => more zoomed)
+
+			});
+		}, false);
+
+		// FeP 2
+		Reveal.addEventListener("FeP-slide-2", function () {
+			var stage = new NGL.Stage("FeP-vp-2", {
+				backgroundColor: "white",
+				sampleLevel: 5
+			});
+			stage.loadFile("assets/mol_geometries/fe_porphyrin.mol2", { defaultRepresentation: true }).then(function (o) {
+				stage.autoView();
+				stage.viewer.camera.position.z = -18; // Camera Zoom (smaller => more zoomed)
+
+			});
+		}, false);
 	</script>
 </body>
 

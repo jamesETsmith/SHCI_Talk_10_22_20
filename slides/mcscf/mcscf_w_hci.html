@@ -1,15 +1,25 @@
 <h1>MCSCF with HCI</h1>
-<span>
-    <p>To optimize orbitals, we rely on the Hellmann-Feynam Thm.:</p>
-    $$
-    \frac{\partial E}{\partial \kappa} =
-    \bra{\Psi_0} \frac{\partial H}{\partial \kappa} \ket{\Psi_0}
-    $$
-</span>
-<span>
-    Enforce variationality of \( E_{HCI} = E_0 + E_2 \)
-    $$
-    \frac{\partial E_{HCI}}{\partial \kappa} =
-    \bra{\Psi_0} \frac{\partial H}{\partial \kappa} \ket{\Psi_0} + ... (\text{lagrangian terms})
-    $$
+<span style="font-size: 0.75em;">
+    <div>
+        <p>To optimize orbitals, we rely on the Hellmann-Feynam Thm. (HFT):</p>
+        $$
+        \frac{\partial E}{\partial \kappa} =
+        \bra{\Psi_0} \frac{\partial H}{\partial \kappa} \ket{\Psi_0}
+        $$
+        Where \( \kappa \) parametrizes our orbitals
+
+    </div>
+    <br>
+    <div class="fragment">
+        HFT requires that \( \ket{\Psi_0} \) is variational, which isn't true if we include the PT correction \( E_2 \)
+    </div>
+    <br>
+    <div class='fragment'>
+        Enforce variationality of \( E_{HCI} = E_0 + E_2 \)
+        $$
+        \frac{\partial E_{HCI}}{\partial \kappa} =
+        \bra{\Psi_0} \frac{\partial H}{\partial \kappa} \ket{\Psi_0} + ... (\text{lagrangian terms})
+        $$
+    </div>
+
 </span>

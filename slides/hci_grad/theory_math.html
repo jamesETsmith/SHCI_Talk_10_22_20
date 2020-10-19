@@ -1,0 +1,43 @@
+<h3 class="sec-E">Gradients of MCSCF Wave Functions</h3>
+<span style="font-size: 0.65em;">
+    $$
+    \bra{\Psi}\hat{H}\ket{\Psi} =
+    E_{elec} =
+    \sum_{ij} h_{ij} \gamma_{ij} +
+    \sum_{ijkl} g_{ijkl} \Gamma_{ijkl}
+    $$
+
+    <span class="fragment">
+
+        $$
+        \frac{\partial E_{elec}}{\partial a} =
+        \sum_{ij} \frac{\partial h_{ij}}{\partial a} \gamma_{ij} +
+        \sum_{ijkl} \frac{\partial g_{ijkl}}{\partial a} \Gamma_{ijkl}
+        $$
+        \( a := \text{nuclear coord.} \)
+
+    </span>
+
+    <span class="fragment">
+
+        $$
+        \frac{\partial E_{elec}}{\partial a} =
+        \sum_{ij} h_{ij}^a \gamma_{ij} + \sum_{ijkl} g_{ijkl}^a \Gamma_{ijkl}
+        - \sum_{ij} X_{ij} S^a_{ij}
+        +
+        \colorbox{yellow}{ \( \sum_{ij} U_{ij}^a (X_{ij} - X_{ji}) \) }
+        $$
+    </span>
+
+    <span class="fragment">
+
+        <i class="fa fa-arrow-circle-down" aria-hidden="true" style="transform: scale(2,2);"></i>
+
+        $$
+        \frac{\partial E_{elec}}{\partial a} =
+        \sum_{ij} h_{ij}^a \gamma_{ij} + \sum_{ijkl} g_{ijkl}^a \Gamma_{ijkl}
+        - \sum_{ij} X_{ij} S^a_{ij}
+        $$
+    </span>
+
+</span>

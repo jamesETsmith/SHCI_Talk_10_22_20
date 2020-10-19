@@ -70,7 +70,9 @@
 			<section data-external="slides/hci_grad/gradient_error.html"
 				data-background-image="assets/CCQ_Full_Logo.png" data-background-size="200px"
 				data-background-position="bottom 100px right 100px"></section>
-
+			<section data-external="slides/hci_grad/fe_pdi_geom.html" data-state="FePDI-slide"
+				data-background-image="assets/CCQ_Full_Logo.png" data-background-size="200px"
+				data-background-position="bottom 100px right 100px"></section>
 
 			<!-- Wrap Up -->
 			<section data-external="slides/dice_capabilities.html" data-background-image="assets/CCQ_Full_Logo.png"
@@ -132,6 +134,19 @@
 		// FeP 2
 		Reveal.addEventListener("FeP-slide-2", function () {
 			var stage = new NGL.Stage("FeP-vp-2", {
+				backgroundColor: "white",
+				sampleLevel: 5
+			});
+			stage.loadFile("assets/mol_geometries/fe_porphyrin.mol2", { defaultRepresentation: true }).then(function (o) {
+				stage.autoView();
+				stage.viewer.camera.position.z = -18; // Camera Zoom (smaller => more zoomed)
+
+			});
+		}, false);
+
+		// FePDI
+		Reveal.addEventListener("FePDI-slide", function () {
+			var stage = new NGL.Stage("FePDI-vp", {
 				backgroundColor: "white",
 				sampleLevel: 5
 			});

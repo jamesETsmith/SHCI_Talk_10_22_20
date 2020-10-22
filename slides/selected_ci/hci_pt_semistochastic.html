@@ -1,0 +1,22 @@
+<h1>Reducing Stochastic Noise</h1>
+
+<span style="font-size: 0.75em;">
+    $$
+    E_2 =
+    \sum_{D_{a} \in \mathcal{C}} \frac{1}{E_{a}-E_{0}}
+    \left(
+    \sum_{D_{i} \in \mathcal{V}_{stoc. }}
+    ^{(\epsilon_2)} H_{a i} c_{i} \right)^2
+    $$
+</span>
+
+<div style="font-size: 0.75em;">
+    <p class="fragment">We can reduce the stochastic noise by calculating as much of \( E_2
+        \)
+        deterministically as possible</p>
+
+    <span class="fragment">
+        $$
+        E_2 = E_2^D (\epsilon_2^D) + (E_2^S (\epsilon_2) - E_2^S (\epsilon_2^D))
+        $$
+</div>

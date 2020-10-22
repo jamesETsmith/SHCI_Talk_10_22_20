@@ -1,13 +1,20 @@
-<h1>Fe(PDI): Geometry Optimization</h1>
+<h1>Applications Preview</h1>
 <div class='cols'>
-    <div style="font-size:24px;">
+    <div class="col">
         <div id="FePDI-vp" style="width:400px; height:300px; margin:auto"></div>
-        <!-- <ul>
-            <li class="fragment" data-fragment-index="2"><b>Very challenging</b></li>
 
-        </ul> -->
+        <br>
+        <br>
+        <br>
+
+        <p style="font-size: 0.75em; text-align: left; ">
+            <b>James E. T. Smith</b>, JL, SS (2020) <em>In prep.</em>
+        </p>
+    </div>
+
+    <div class="col">
         <p style="text-align: center;"><u>Goals</u></p>
-        <ul>
+        <ul style="font-size: 0.75em;">
             <li class="fragment" data-fragment-index="1">Can we run geometry optimizations on such a strongly correlated
                 species?
                 <span class="fragment" data-fragment-index="3"><i class="fa fa-check" aria-hidden="true"
@@ -20,75 +27,41 @@
         </ul>
 
 
-    </div>
-
-    <div style="font-size:24px;">
-
-        <p class="fragment" data-fragment-index="3"><u>CAS(24e,21o)</u></p>
-        <ul class="fragment" data-fragment-index="3">
-            <li>Other active spaces are challenging</li>
-            <li>Orbitals coming in/out of AS</li>
-
-        </ul>
         <br>
         <br>
-
+        <br>
 
         <table border="1" class="fragment" data-fragment-index="4" style="font-size: 0.75em;">
             <thead>
                 <tr style="text-align: right;">
-                    <th>Method/System</th>
-                    <th>Fe-N<sub>2</sub> (<span>&#8491;</span>)</th>
-                    <th>N-N (<span>&#8491;</span>)</th>
+                    <th>CAS</th>
+                    <th>RMSD Singlet Geoms.</th>
+                    <th>RMSD Triplet Geoms.</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>UDFT Singlet<sup>*</sup></td>
-                    <td style="text-align: center;">1.805</td>
-                    <td style="text-align: center;">1.124</td>
+                    <td>(10e,10o)</td>
+                    <td>0.215</td>
+                    <td>0.770</td>
                 </tr>
                 <tr>
-                    <td>UDFT Triplet<sup>*</sup></td>
-                    <td style="text-align: center;">1.877</td>
-                    <td style="text-align: center;">1.124</td>
+                    <td>(20e,20o)</td>
+                    <td>0.192</td>
+                    <td>0.705</td>
                 </tr>
                 <tr>
-                    <td>vHCISCF Singlet<sup>**</sup></td>
-                    <td style="text-align: center;">2.194</td>
-                    <td style="text-align: center;">1.099</td>
+                    <td>(30e,30o)</td>
+                    <td>0.187</td>
+                    <td>0.565</td>
                 </tr>
                 <tr>
-                    <td>vHCISCF Triplet<sup>**</sup></td>
-                    <td style="text-align: center;">2.207</td>
-                    <td style="text-align: center;">1.099</td>
-                </tr>
-                <tr>
-                    <td>Experimental<sup>***</sup></td>
-                    <td style="text-align: center;">1.799</td>
-                    <td style="text-align: center;">1.117</td>
+                    <td>(40e,40o)</td>
+                    <td>0.137</td>
+                    <td>0.371</td>
                 </tr>
             </tbody>
         </table>
-
-        <ul>
-            <li class="fragment" data-fragment-index="6">Largest changes in geometry involve the N<sub>2</sub> ligand.
-            </li>
-            <li class="fragment" data-fragment-index="7">Overall our geometries disagree somewhat with experimental ones
-            </li>
-            <!-- <li class="fragment" data-fragment-index="8">Fe-N<sub>2</sub> bond is much longer, N-N bond is slightly
-                smaller</li> -->
-        </ul>
-
-
-        <p style="font-size: 0.75em; text-align: left; ">
-            * MAO and CJC. <a href="https://pubs.acs.org/doi/10.1021/acs.jpca.7b06032"> JPCA (2017)</a>
-            <br>
-            ** <b>James E. T. Smith</b>, JL, SS (2020) <em>In prep.</em>
-            <br>
-            *** Stieber <em>et al</em> <a href="https://pubs.acs.org/doi/10.1021/ic202750n"> Inorg.
-                Chem (2012)</a>
-        </p>
 
     </div>
 </div>

@@ -1,20 +1,22 @@
-<h1>Digression: Bottlenecks</h1>
+<h1>Bottlenecks (Optional)</h1>
 <div style="text-align: left;">
     <ol style="font-size: 0.75em;">
-        <li>Matrix diagonalization (Davidson's Algorithm)
-            <ul class="fragment">
+        <li class="fragment">Matrix diagonalization (Davidson's Algorithm)
+            <ul>
                 <li>Large sparse matrix vector multiplication</li>
                 <li>Non-standard storage of matrix makes it tougher to optimize</li>
+                <li>Memory/speed trade-off in matrix storage</li>
             </ul>
         </li>
         <li class="fragment">Evaluating and appending CI Hamiltonian
-            <ul class="fragment">
+            <ul>
                 <li>Typically 10<sup>6</sup> x 10<sup>6</sup> or larger (stored sparsely)</li>
                 <li>Not easy to use standard containers because the matrix changes dimensions every iteration</li>
             </ul>
         </li>
-        <li class="fragment">Searching for new/"important" determinants
-            <ul class="fragment">
+        <li class="fragment">
+            Searching for new/"important" determinants
+            <ul>
                 <li>Look at connected determinants for <em>each</em> determinant in the active space</li>
             </ul>
         </li>

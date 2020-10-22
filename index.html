@@ -25,6 +25,8 @@
 			<!--  Simple Stuff -->
 			<section data-external="slides/title.html"> </section>
 			<section data-external="slides/intro/thank_you.html"></section>
+			<section data-external="slides/intro/outline.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
 
 			<!-- Intro -->
 			<section data-external="slides/intro/el_struct.html" data-background-image="assets/CCQ_Full_Logo.png"
@@ -44,15 +46,22 @@
 				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
 			<section data-external="slides/selected_ci/hci_pt.html" data-background-image="assets/CCQ_Full_Logo.png"
 				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/selected_ci/hci_pt_semistochastic.html"
+				data-background-image="assets/CCQ_Full_Logo.png" data-background-size="200px"
+				data-background-position="bottom 100px right 100px"></section>
 			<!-- <section data-external="slides/selected_ci/vpt.html"></section> -->
 			<section data-external="slides/selected_ci/hci_practical.html"
 				data-background-image="assets/CCQ_Full_Logo.png" data-background-size="200px"
 				data-background-position="bottom 100px right 100px"></section>
 
 			<!-- MCSCF -->
+			<section data-external="slides/mcscf/outline_chk.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
 			<section data-external="slides/mcscf/mcscf.html" data-background-image="assets/CCQ_Full_Logo.png"
 				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
 			<section data-external="slides/mcscf/mcscf_w_hci.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
+			<section data-external="slides/mcscf/workflow.html" data-background-image="assets/CCQ_Full_Logo.png"
 				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
 			<section data-external="slides/mcscf/fe_p.html" data-state="FeP-slide-1"
 				data-background-image="assets/CCQ_Full_Logo.png" data-background-size="200px"
@@ -62,6 +71,8 @@
 				data-background-position="bottom 100px right 100px"></section>
 
 			<!-- MCSCF Grad -->
+			<section data-external="slides/hci_grad/outline_chk.html" data-background-image="assets/CCQ_Full_Logo.png"
+				data-background-size="200px" data-background-position="bottom 100px right 100px"></section>
 			<section data-external="slides/hci_grad/theory_overview.html"
 				data-background-image="assets/CCQ_Full_Logo.png" data-background-size="200px"
 				data-background-position="bottom 100px right 100px"></section>
@@ -150,7 +161,7 @@
 				backgroundColor: "white",
 				sampleLevel: 5
 			});
-			stage.loadFile("assets/mol_geometries/fe_porphyrin.mol2", { defaultRepresentation: true }).then(function (o) {
+			stage.loadFile("assets/mol_geometries/fe_pdi.mol2", { defaultRepresentation: true }).then(function (o) {
 				stage.autoView();
 				stage.viewer.camera.position.z = -18; // Camera Zoom (smaller => more zoomed)
 

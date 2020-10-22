@@ -45,13 +45,13 @@ for i in range(len(levels)):
 active = plt.Rectangle((0, -0.25), 4, 0.5, lw=4, ec="r", fc="w", label="Active")
 plt.gca().add_patch(active)
 
-# Highlight inactive orbitals
-inactive = plt.Rectangle((0, -0.45), 4, 0.18, lw=4, ec="b", fc="w", label="Inactive")
-plt.gca().add_patch(inactive)
+# # Highlight inactive orbitals
+# inactive = plt.Rectangle((0, -0.45), 4, 0.18, lw=4, ec="b", fc="w", label="Inactive")
+# plt.gca().add_patch(inactive)
 
-# Highlight virtual orbitals
-virtual = plt.Rectangle((0, 0.27), 4, 0.3, lw=4, ec="g", fc="w", label="Virtual")
-plt.gca().add_patch(virtual)
+# # Highlight virtual orbitals
+# virtual = plt.Rectangle((0, 0.27), 4, 0.3, lw=4, ec="g", fc="w", label="Virtual")
+# plt.gca().add_patch(virtual)
 
 # Axis ticks and labels
 plt.gca().get_xaxis().set_visible(False)
